@@ -4,6 +4,7 @@ ZSH_THEME="zanshin/zanshin"
 plugins=(git sudo zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/dotfiles/aliases
 source $HOME/.aliases
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

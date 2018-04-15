@@ -19,7 +19,7 @@ curl -sSL https://get.rvm.io | bash -s stable
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://gist.github.com/1142716.git ~/.oh-my-zsh/custom/themes/zanshin
 
-ln -s ~/dotfiles/aliases ~/.aliases
+touch ~/.aliases
 echo source $HOME/dotfiles/zshrc>~/.zshrc
 
 brew cleanup
