@@ -9,7 +9,10 @@ source $HOME/.aliases
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-export PATH="$PATH:$HOME/.rvm/bin"
+eval "$(jenv init -)"
 
 eval `ssh-agent -s`
 #echo ssh-add ~/.ssh/id_github >> ~/.zshrc
+
+export PATH="$PATH:$HOME/.rvm/bin"
+

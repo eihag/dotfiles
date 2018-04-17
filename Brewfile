@@ -3,48 +3,51 @@
 # brew bundle --global
 
 tap 'caskroom/cask'
+tap 'caskroom/versions'
 
 # Shell + utils
-brew 'zsh'
-brew 'zsh-completions'
-brew 'zsh-syntax-highlighting'
+
 brew 'autojump'
-cask 'iterm2'
 brew 'awscli'
 brew 'awslogs'
 brew 'curl'
-brew 'wget'
-brew 'tree'
-brew 'htop'
-brew 'speedtest-cli'
-brew 'openssl'
 brew 'gpg'
+brew 'htop'
+cask 'iterm2'
+brew 'openssl'
 brew 'screen'
+brew 'speedtest-cli'
+brew 'the_silver_searcher'
+brew 'tree'
+brew 'wget'
+brew 'zsh'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
 
 # Applications
-cask 'alfred'
-cask 'google-chrome'
-cask 'caskroom/versions/firefox-developer-edition'
-cask 'keybase'
 cask '1password'
-cask 'slack'
-cask 'jdiskreport'
-cask 'virtualbox'
+cask 'alfred'
 cask 'betterzip'
-
-# App Store
-brew 'mas'
-mas 'Slack', id: 803453959
+cask 'caskroom/versions/firefox-developer-edition'
+cask 'fliqlo'
+cask 'google-chrome'
+cask 'istat-menus5'
+cask 'jdiskreport'
+cask 'keybase'
+cask 'slack'
+cask 'virtualbox'
 
 # Editors
-brew 'vim'
 cask 'sublime-text'
+brew 'vim'
 
 # Development
-brew 'git'
-brew 'python'
-cask 'java'
-brew 'gradle'
-brew 'maven'
-cask 'intellij-idea-ce'
 cask 'dash'
+brew 'git'
+brew 'gradle'
+cask 'intellij-idea-ce'
+brew 'jenv'
+cask 'java'
+cask 'java8'
+brew 'maven'
+brew 'python'
