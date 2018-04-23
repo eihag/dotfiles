@@ -6,7 +6,6 @@ tap 'caskroom/cask'
 tap 'caskroom/versions'
 
 # Shell + utils
-
 brew 'autojump'
 brew 'awscli'
 brew 'awslogs'
@@ -32,6 +31,7 @@ cask 'caskroom/versions/firefox-developer-edition'
 cask 'fliqlo'
 cask 'google-chrome'
 cask 'istat-menus5'
+csak 'iina'
 cask 'jdiskreport'
 cask 'keybase'
 cask 'slack'
