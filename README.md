@@ -8,7 +8,6 @@ Install HomeBrew + Zsh + Oh-my-Zsh and more
 cd ~
 git clone https://github.com/eihag/dotfiles.git
 ~/dotfiles/install.sh
-install.sh
 </code></pre>
 
 
@@ -39,13 +38,6 @@ Set autoplay policy: [chrome://flags/#autoplay-policy]()
 * Save Actions
 * YAML
 * Nyan Progress Bar
-
-
-### Git
-<pre><code>
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_github
-git config --global url.ssh://git@github.com/.insteadOf https://github.com/
-</code></pre>
 
 # Windows
 Download here: https://cygwin.com/install.html
