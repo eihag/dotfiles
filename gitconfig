@@ -1,0 +1,5 @@
+[user]
+	name = Eivind Hagen
+    email = "(none)"
+[core]
+    excludesfile = ~/dotfiles/gitignore

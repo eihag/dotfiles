@@ -1,1 +1,4 @@
+alias chrome="open -a google\ chrome"
 alias ll="ls -l"
+alias now='date +"%T"'
+alias week='date +%V'
