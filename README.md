@@ -26,7 +26,7 @@ Block
 * sound
 * 3rd party cookies
 
-Set autoplay policy: [chrome://flags/#autoplay-policy]()
+Set autoplay policy: [chrome://flags/#autoplay-policy](chrome://flags/#autoplay-policy)
 
 # Intellij plugins
 * .ignore

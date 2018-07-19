@@ -50,10 +50,17 @@ if [ "$SHELL" != "/bin/zsh" ]; then
 	chsh -s /bin/zsh 
 fi
 
-# Global GIT config
 if [ ! -f "$HOME/.gitconfig" ]; then
 	ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
 fi
+
+for dir in /Library/Java/JavaVirtualMachines/*/
+do
+	echo Adding jdk ${dir}
+	# Note: use --skip-existing when new release of jenv
+	jenv add ${dir}/Contents/Home    
+done
+jenv global 1.8
 
 brew cleanup
 brew cask cleanup

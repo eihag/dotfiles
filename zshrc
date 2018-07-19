@@ -9,9 +9,10 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/aliases
 source $HOME/.aliases
 
+export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-eval `ssh-agent -s`
-#ssh-add ~/.ssh/id_github
 
 export PATH="$PATH:$HOME/.rvm/bin"
 
+eval `ssh-agent -s`
+# ssh-add ~/.ssh/id_github
