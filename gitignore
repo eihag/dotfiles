@@ -2,9 +2,11 @@
 *.iml
 *~
 *.log
-DS_Store
+.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
 target/
+*.lock
+__pycache__/

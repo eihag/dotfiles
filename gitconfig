@@ -1,7 +1,9 @@
 [user]
 	name = Eivind Hagen
-    email = "(none)"
+	useConfigOnly = true
 [core]
     excludesfile = ~/dotfiles/gitignore
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://"]
+	insteadOf = git://

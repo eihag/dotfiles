@@ -61,6 +61,8 @@ cask 'mysqlworkbench'
 brew 'npm'
 brew 'packer'
 brew 'python'
+brew 'yarn'
 cask 'virtualbox'
 cask 'vagrant'
+brew 'webpack'
 mas "Xcode", id: 497799835

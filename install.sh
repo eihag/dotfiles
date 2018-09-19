@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd $HOME
 
@@ -38,6 +38,15 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	git clone https://gist.github.com/1142716.git $HOME/.oh-my-zsh/custom/themes/zanshin
 fi
 
+
+if [ -f "$HOME/.profile" ]; then
+	echo $HOME/.profile exists
+fi
+
+if [ ! -f "$HOME/.zprofile" ]; then
+	echo source $HOME/dotfiles/zprofile>$HOME/.zprofile
+fi
+
 if [ ! -f "$HOME/.zshrc" ]; then
 	echo source $HOME/dotfiles/zshrc>$HOME/.zshrc
 fi
@@ -61,7 +70,7 @@ do
 	jenv add ${dir}/Contents/Home    
 done
 jenv global 1.8
+eval `jenv "sh-enable-plugin" "maven"`
+eval `jenv "sh-enable-plugin" "export"`
 
 brew cleanup
-brew cask cleanup
-
