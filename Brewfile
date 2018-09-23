@@ -45,7 +45,7 @@ brew 'vim'
 
 # Development
 brew 'bower'
-cask 'chef/chef/chefdk'
+#cask 'chef/chef/chefdk'
 cask 'dash'
 cask 'docker'
 brew 'git'
@@ -65,4 +65,4 @@ brew 'yarn'
 cask 'virtualbox'
 cask 'vagrant'
 brew 'webpack'
-mas "Xcode", id: 497799835
+#mas "Xcode", id: 497799835

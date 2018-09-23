@@ -10,6 +10,15 @@ else
 	git clone https://github.com/eihag/dotfiles.git
 fi
 
+XCODE_ENV=`xcode-select -p`
+if [ ! "$XCODE_ENV" = "/Library/Developer/CommandLineTools" ] && [ ! "$XCODE_ENV" = "/Applications/Xcode.app/Contents/Developer" ]; then
+	# echo Xcode license
+	# sudo xcodebuild -license accept
+	xcode-select --install
+	echo Press Enter when XCode command line tools is installed
+	read -n 1  key
+fi
+
 if [ ! -f "/usr/local/bin/brew" ]; then
 	echo Installing Homebrew
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -25,9 +34,6 @@ fi
 
 brew bundle --global
 
-echo Xcode license
-sudo xcodebuild -license accept
-
 if [ ! -d "$HOME/.rvm" ]; then
 	echo Installing RVM
 	gpg --keyserver pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -39,7 +45,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 	git clone https://gist.github.com/1142716.git $HOME/.oh-my-zsh/custom/themes/zanshin
 fi
-
 
 if [ -f "$HOME/.profile" ]; then
 	echo $HOME/.profile exists
@@ -67,12 +72,12 @@ fi
 
 for dir in /Library/Java/JavaVirtualMachines/*/
 do
-	echo Adding jdk ${dir}
+	echo Adding jdk ${dir}	
 	# Note: use --skip-existing when new release of jenv
-	jenv add ${dir}/Contents/Home    
+	echo yyyyy|jenv add ${dir}/Contents/Home
 done
 jenv global 1.8
 eval `jenv "sh-enable-plugin" "maven"`
 eval `jenv "sh-enable-plugin" "export"`
 
-brew cleanup
+brew cleanup -s --prune=14 
