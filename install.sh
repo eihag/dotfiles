@@ -34,6 +34,10 @@ fi
 
 brew bundle --global
 
+pip3 install --upgrade pip
+pip3 install -r $HOME/dotfiles/requirements.txt 
+pip-review --auto
+
 if [ ! -d "$HOME/.rvm" ]; then
 	echo Installing RVM
 	gpg --keyserver pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -43,7 +47,10 @@ fi
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	echo Installing Oh-my-zsh + prompt
 	git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-	git clone https://gist.github.com/1142716.git $HOME/.oh-my-zsh/custom/themes/zanshin
+	git clone https://gist.github.com/1142716.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/zanshin
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 fi
 
 if [ -f "$HOME/.profile" ]; then
@@ -73,10 +80,9 @@ fi
 for dir in /Library/Java/JavaVirtualMachines/*/
 do
 	echo Adding jdk ${dir}	
-	# Note: use --skip-existing when new release of jenv
-	echo yyyyy|jenv add ${dir}/Contents/Home
+	jenv add ${dir}/Contents/Home
 done
-jenv global 1.8
+#jenv global 1.8
 eval `jenv "sh-enable-plugin" "maven"`
 eval `jenv "sh-enable-plugin" "export"`
 

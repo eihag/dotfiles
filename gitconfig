@@ -3,5 +3,6 @@
 	useConfigOnly = true
 [core]
     excludesfile = ~/dotfiles/gitignore
+	autocrlf = input
 [url "https://"]
 	insteadOf = git://
