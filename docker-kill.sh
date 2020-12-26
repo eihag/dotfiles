@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+docker system prune -f
 
 # Kill all running containers
 RUNNING=$(docker ps -q)

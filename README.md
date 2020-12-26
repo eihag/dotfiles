@@ -18,6 +18,8 @@ git clone https://github.com/eihag/dotfiles.git
 * https everywhere
 
 #### Settings
+
+chrome://settings/content
 Block
 * notifications
 * camera
@@ -26,7 +28,9 @@ Block
 * sound
 * 3rd party cookies
 
-Set autoplay policy: [chrome://flags/#autoplay-policy](chrome://flags/#autoplay-policy)
+Set autoplay policy: [chrome://flags/#autoplay-policy](chrome://flags/#autoplay-policy) - No longer working :(
+
+Disable Chrome sign-in:  chrome://settings/privacy -> Allow Chrome sign-in -> OFF. 
 
 # Intellij plugins
 * .ignore

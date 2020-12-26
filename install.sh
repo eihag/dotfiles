@@ -22,10 +22,11 @@ fi
 if [ ! -f "/usr/local/bin/brew" ]; then
 	echo Installing Homebrew
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew analytics off
 else
 	brew update
 	brew upgrade
-	brew cask upgrade
+	brew upgrade --cask
 fi
 
 if [ ! -f "$HOME/.Brewfile" ]; then
@@ -83,6 +84,8 @@ do
 	jenv add ${dir}/Contents/Home
 done
 #jenv global 1.8
+
+jenv disable-plugin maven
 eval `jenv "sh-enable-plugin" "maven"`
 eval `jenv "sh-enable-plugin" "export"`
 

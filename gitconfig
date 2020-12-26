@@ -6,3 +6,5 @@
 	autocrlf = input
 [url "https://"]
 	insteadOf = git://
+[pull]
+	rebase = false

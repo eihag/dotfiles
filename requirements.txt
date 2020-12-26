@@ -1,2 +1,4 @@
 virtualenv
 pip-review
+cfn-lint
+cfn-flip
