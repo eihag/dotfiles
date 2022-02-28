@@ -54,6 +54,10 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 fi
 
+if [ ! -d "$HOME/icloud" ]; then
+	ln -s $HOME/Library/Mobile\ Documents/com~apple~CloudDocs $HOME/icloud
+fi
+
 if [ -f "$HOME/.profile" ]; then
 	echo $HOME/.profile exists
 fi
@@ -83,10 +87,16 @@ do
 	echo Adding jdk ${dir}	
 	jenv add ${dir}/Contents/Home
 done
+# for dir in /usr/local/Cellar/openjdk/*/
+# do
+#	echo Adding jdk ${dir}	
+# 	jenv add ${dir}
+# done
 #jenv global 1.8
 
+jenv rehash
 jenv disable-plugin maven
 eval `jenv "sh-enable-plugin" "maven"`
 eval `jenv "sh-enable-plugin" "export"`
 
-brew cleanup -s --prune=14 
+brew cleanup -s --prune=14
