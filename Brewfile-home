@@ -1,13 +1,9 @@
 # Usage:
-# ln -s dotfiles/Brewfile $HOME/.Brewfile
+# ln -s dotfiles/Brewfile-<profile> $HOME/.Brewfile
 # brew bundle --global
-
-tap 'aws/tap'
 
 # Shell + utils
 brew 'autojump'
-brew 'awscli'
-brew 'awslogs'
 brew 'curl'
 brew 'ffmpeg'
 brew 'gpg'
@@ -18,6 +14,7 @@ brew 'jsonpp'
 brew 'keychain'
 brew 'multitail'
 brew 'openssl'
+cask 'rar'
 brew 'ripgrep'
 brew 'screen'
 brew 'speedtest-cli'
@@ -28,54 +25,34 @@ brew 'youtube-dl'
 brew 'watch'
 brew 'wget'
 brew 'zsh'
+brew 'zsh-autosuggestions'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
 
 # Applications
-cask '1password'
 cask 'alfred'
 cask 'cyberduck'
-cask 'firefox-developer-edition'
+cask 'firefox'
 cask 'easyfind'
 cask 'fliqlo'
-cask 'google-chrome'
 cask 'istat-menus'
-cask 'istumbler'
 cask 'iina'
+cask 'inkscape'
 cask 'jdiskreport'
-cask 'keybase'
 cask 'slack'
 cask 'the-unarchiver'
+cask 'tor-browser'
 cask 'adobe-acrobat-reader'
+cask 'transmission'
 mas "Things 3", id: 904280696
 
 # Editors
-cask 'sublime-text'
+# cask 'sublime-text'
 brew 'vim'
 
 # Development
-cask 'temurin'
-cask 'temurin8'
-brew 'aws-sam-cli'
-brew 'bower'
-# cask 'chef/chef/chefdk'
-cask 'dash'
-cask 'docker'
 brew 'git'
-brew 'gradle'
-brew 'grunt-cli'
-cask 'intellij-idea-ce'
-brew 'jenv'
-brew 'maven'
-brew 'mysql'
-cask 'mysqlworkbench'
-brew 'npm'
-brew 'packer'
-brew 'python'
-# cask 'soapui'
-brew 'yarn'
-cask 'virtualbox'
-cask 'visualvm'
-cask 'vagrant'
-brew 'webpack'
-#mas "Xcode", id: 497799835
+#brew 'python'
 
-#brew 'ultimaker-cura'
+cask 'ultimaker-cura'
+

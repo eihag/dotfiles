@@ -21,7 +21,7 @@ fi
 
 if [ ! -f "/usr/local/bin/brew" ]; then
 	echo Installing Homebrew
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew analytics off
 else
 	brew update
@@ -30,7 +30,7 @@ else
 fi
 
 if [ ! -f "$HOME/.Brewfile" ]; then
-	ln -s $HOME/dotfiles/Brewfile $HOME/.Brewfile
+	ln -s $HOME/dotfiles/Brewfile-work $HOME/.Brewfile
 fi
 
 brew bundle --global
@@ -47,11 +47,8 @@ fi
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	echo Installing Oh-my-zsh + prompt
-	git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	git clone https://gist.github.com/1142716.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/zanshin
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-	git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-	git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 fi
 
 if [ ! -d "$HOME/icloud" ]; then
@@ -80,6 +77,10 @@ fi
 
 if [ ! -f "$HOME/.gitconfig" ]; then
 	ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
+fi
+
+if [ ! -f "$HOME/.gitignore" ]; then
+  ln -s $HOME/dotfiles/gitignore $HOME/.gitignore
 fi
 
 for dir in /Library/Java/JavaVirtualMachines/*/

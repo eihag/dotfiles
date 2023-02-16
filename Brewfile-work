@@ -1,0 +1,78 @@
+# Usage:
+# ln -s dotfiles/Brewfile-<profile> $HOME/.Brewfile
+# brew bundle --global
+
+# Shell + utils
+brew 'autojump'
+brew 'awscli'
+brew 'awslogs'
+brew 'curl'
+brew 'ffmpeg'
+brew 'gpg'
+brew 'htop'
+brew 'imagemagick'
+cask 'iterm2'
+brew 'jsonpp'
+brew 'keychain'
+brew 'multitail'
+brew 'openssl'
+brew 'ripgrep'
+brew 'screen'
+brew 'speedtest-cli'
+brew 'telnet'
+brew 'the_silver_searcher'
+brew 'tree'
+brew 'youtube-dl'
+brew 'watch'
+brew 'wget'
+brew 'zsh'
+brew 'zsh-autosuggestions'
+brew 'zsh-completions'
+brew 'zsh-syntax-highlighting'
+
+# Applications
+cask 'alfred'
+cask 'cyberduck'
+cask 'firefox'
+cask 'easyfind'
+cask 'fliqlo'
+cask 'google-chrome'
+cask 'istat-menus'
+cask 'iina'
+cask 'jdiskreport'
+cask 'keybase'
+cask 'slack'
+cask 'the-unarchiver'
+cask 'adobe-acrobat-reader'
+mas "Things 3", id: 904280696
+
+# Editors
+# cask 'sublime-text'
+brew 'vim'
+
+# Development
+cask 'temurin'
+cask 'temurin8'
+brew 'aws-sam-cli'
+# brew 'bower'
+# cask 'chef/chef/chefdk'
+cask 'docker'
+brew 'git'
+# brew 'gradle'
+# brew 'grunt-cli'
+cask 'intellij-idea-ce'
+brew 'jenv'
+brew 'maven'
+brew 'mysql'
+cask 'mysqlworkbench'
+# brew 'npm'
+# brew 'packer'
+brew 'python'
+# cask 'soapui'
+# brew 'yarn'
+# cask 'virtualbox'
+cask 'visualvm'
+# cask 'vagrant'
+# brew 'webpack'
+# mas "Xcode", id: 497799835
+
