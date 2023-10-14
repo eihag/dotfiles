@@ -36,11 +36,9 @@ Disable Chrome sign-in:  chrome://settings/privacy -> Allow Chrome sign-in -> OF
 * .ignore
 * AWS Cloudformation
 * Checkstyle-IDEA
-* Findbugs-IDEA
-* Markdown support
+* SpotBugs
 * Python Community Edition
 * Save Actions
-* YAML
 * Nyan Progress Bar
 
 # Windows

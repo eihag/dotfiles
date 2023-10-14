@@ -4,7 +4,7 @@ cd $HOME
 
 if [ -d "dotfiles" ]; then
 	cd dotfiles
-	git pull
+	git pull --autostash
 	cd ..
 else
 	git clone https://github.com/eihag/dotfiles.git
@@ -19,21 +19,25 @@ if [ ! "$XCODE_ENV" = "/Library/Developer/CommandLineTools" ] && [ ! "$XCODE_ENV
 	read -n 1  key
 fi
 
-if [ ! -f "/usr/local/bin/brew" ]; then
+if [ ! -f "/opt/homebrew/bin/brew" ]; then
 	echo Installing Homebrew
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	brew analytics off
+	/opt/homebrew/bin/brew analytics off
+	/opt/homebrew/bin/brew tap homebrew/cask-versions
+
+	sudo softwareupdate --install-rosetta
 else
-	brew update
-	brew upgrade
-	brew upgrade --cask
+	/opt/homebrew/bin/brew update
+	/opt/homebrew/bin/brew upgrade
+	/opt/homebrew/bin/brew upgrade --cask
+	/opt/homebrew/bin/brew autoremove
 fi
 
 if [ ! -f "$HOME/.Brewfile" ]; then
 	ln -s $HOME/dotfiles/Brewfile-work $HOME/.Brewfile
 fi
 
-brew bundle --global
+/opt/homebrew/bin/brew bundle --global
 
 pip3 install --upgrade pip
 pip3 install -r $HOME/dotfiles/requirements.txt 
@@ -93,7 +97,7 @@ done
 #	echo Adding jdk ${dir}	
 # 	jenv add ${dir}
 # done
-#jenv global 1.8
+#jenv global 19.0
 
 jenv rehash
 jenv disable-plugin maven
