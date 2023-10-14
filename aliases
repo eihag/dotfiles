@@ -11,5 +11,6 @@ alias git-branch-recursive=~/dotfiles/git-branch-recursive.sh
 alias git-stats-recursive=~/dotfiles/git-stats-recursive.sh 
 alias git-prune-branches=~/dotfiles/git-prune-branches.sh 
 alias update-github-repo-list=~/dotfiles/update-github-repo-list.sh
+alias list-gha-fails=~/dotfiles/list-gha-fails.sh
 alias list-gha-runs=~/dotfiles/list-gha-runs.sh
 alias list-open-prs=~/dotfiles/list-open-prs.sh
