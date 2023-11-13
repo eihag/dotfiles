@@ -14,3 +14,6 @@ alias update-github-repo-list=~/dotfiles/update-github-repo-list.sh
 alias list-gha-fails=~/dotfiles/list-gha-fails.sh
 alias list-gha-runs=~/dotfiles/list-gha-runs.sh
 alias list-open-prs=~/dotfiles/list-open-prs.sh
+alias slow-tests=~/dotfiles/slow-tests.sh
+alias docker-pull-all=~/dotfiles/docker-pull-all.sh
+alias docker-scan-all-images=~/dotfiles/docker-scan-all-images.sh
